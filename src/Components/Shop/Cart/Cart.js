@@ -6,14 +6,16 @@ const Cart = () => {
 	const { cart } = Cart;
 	return (
 		<div className="sticky-top">
-			<h1>This Is {cart.length}</h1>
+			<h1>Selected Item {cart.length}</h1>
 			<h6>
 				Total Amount $ $
 				{cart.reduce((total, price) => total + price.price * price.quantity, 0)}
 			</h6>
-			{cart.map((item) => (
-				<CartItem key={item.key} item={item} cart={Cart} />
-			))}
+			<div style={{ overflow: 'auto', height: '90vh' }}>
+				{cart.map((item) => (
+					<CartItem key={item.key} item={item} cart={Cart} />
+				))}
+			</div>
 		</div>
 	);
 };
