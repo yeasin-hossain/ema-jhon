@@ -5,7 +5,7 @@ const Cart = () => {
 	const { Cart } = useContext(EmajhonContext);
 	const { cart } = Cart;
 	return (
-		<div className="sticky-top">
+		<div className="sticky-top border p-3">
 			<h1>Selected Item {cart.length}</h1>
 			<h6>
 				Total Amount $ $

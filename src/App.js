@@ -12,7 +12,7 @@ function App() {
 			<Nav />
 			<EmaJhonProvider>
 				<div className="row">
-					<div className="col-md-9">
+					<div className="col-md-8">
 						<Switch>
 							<Route exact path="/">
 								<Home />
@@ -25,7 +25,7 @@ function App() {
 							</Route>
 						</Switch>
 					</div>
-					<div className="col-md-3">
+					<div className="col-md-4 border-start p-3">
 						<Cart />
 					</div>
 				</div>

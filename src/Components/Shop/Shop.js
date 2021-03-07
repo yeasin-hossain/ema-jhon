@@ -5,7 +5,7 @@ import Product from './Product/Product';
 const Shop = () => {
 	const { products, Cart } = useContext(EmajhonContext);
 	return (
-		<div>
+		<div className="d-flex flex-column align-items-center">
 			{products.map((product) => (
 				<Product key={product.key} product={product} cart={Cart} />
 			))}

@@ -5,7 +5,7 @@ const CartItem = ({ item, cart }) => {
 	const { name, price, quantity, key } = item;
 	const { cartQuantityIncress, cartItemRemove, cartQuantityDecrease } = cart;
 	return (
-		<div className="m-3">
+		<div className="m-3  border-bottom p-2">
 			<Link to={`/product/${key}`}>
 				<p>{name}</p>
 			</Link>
