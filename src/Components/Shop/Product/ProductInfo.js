@@ -8,7 +8,6 @@ const ProductInfo = () => {
 	const { key } = useParams();
 	const { addToCart } = useContext(EmajhonContext);
 
-	// const { name, price } = singleProduct;
 	useEffect(() => {
 		const product = fakeData.find((pd) => pd.key === key);
 		setSingleProduct(product);

@@ -23,7 +23,6 @@ export const EmaJhonProvider = (props) => {
 		} else {
 			console.log('already in');
 			product.quantity += 1;
-			console.log(product);
 			setCart([...cart]);
 		}
 	};
@@ -34,13 +33,9 @@ export const EmaJhonProvider = (props) => {
 	};
 	const cartQuantityDecrease = (product) => {
 		const inCart = cart.find((pd) => pd.key === product);
-		console.log(inCart);
-		console.log(product);
 		if (inCart.quantity === 1) {
-			console.log('under 1');
 			cartItemRemove(product);
 		} else {
-			console.log('upper 1');
 			inCart.quantity -= 1;
 			setCart([...cart]);
 		}
