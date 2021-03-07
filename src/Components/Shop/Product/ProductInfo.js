@@ -1,18 +1,23 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { EmajhonContext } from '../../../DataBase';
-// import { addToCart } from '../../../utilities/CartFunction';
+import fakeData from '../../../fakeData/index';
 
 const ProductInfo = () => {
+	const [singleProduct, setSingleProduct] = useState([]);
 	const { key } = useParams();
-	const { products, addToCart } = useContext(EmajhonContext);
-	const product = products.find((pd) => pd.key === key);
-	const { name, price } = product;
+	const { addToCart } = useContext(EmajhonContext);
+
+	// const { name, price } = singleProduct;
+	useEffect(() => {
+		const product = fakeData.find((pd) => pd.key === key);
+		setSingleProduct(product);
+	}, [key]);
 	return (
 		<div>
-			<h3>{name}</h3>
-			<p>{price}</p>
-			<button onClick={() => addToCart(product)} className="btn btn-info">
+			<h5>{singleProduct.name}</h5>
+			<p>{singleProduct.price}</p>
+			<button onClick={() => addToCart(singleProduct)} className="btn btn-info">
 				Add To Cart
 			</button>
 		</div>

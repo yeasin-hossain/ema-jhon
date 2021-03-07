@@ -3,17 +3,11 @@ import { EmajhonContext } from '../../DataBase';
 import Product from './Product/Product';
 
 const Shop = () => {
-	const { products, addToCart } = useContext(EmajhonContext);
-	// const { cart, setCart } = useContext(EmajhonContext);
-	// const addToCart = (product) => {
-	// 	const inCart = cart.filter((pd) => pd.key === product.key);
-	// 	console.log(inCart);
-	// 	inCart.length === 0 ? setCart([...cart, product]) : console.log('Sorry');
-	// };
+	const { products, Cart } = useContext(EmajhonContext);
 	return (
 		<div>
 			{products.map((product) => (
-				<Product key={product.key} product={product} cart={addToCart} />
+				<Product key={product.key} product={product} cart={Cart} />
 			))}
 		</div>
 	);
