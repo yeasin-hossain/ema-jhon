@@ -9,7 +9,7 @@ const CartItem = ({ item, cart }) => {
 			<Link to={`/product/${key}`}>
 				<p>{name}</p>
 			</Link>
-			<h4>{price}</h4>
+			<h4>${price}</h4>
 			<h4>Quantity:- {quantity}</h4>
 			<div className="d-flex">
 				<button

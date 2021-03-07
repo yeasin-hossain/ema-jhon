@@ -15,7 +15,7 @@ const ProductInfo = () => {
 	return (
 		<div>
 			<h5>{singleProduct.name}</h5>
-			<p>{singleProduct.price}</p>
+			<p>$ {singleProduct.price}</p>
 			<button onClick={() => addToCart(singleProduct)} className="btn btn-info">
 				Add To Cart
 			</button>

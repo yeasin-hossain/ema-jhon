@@ -10,7 +10,7 @@ const Product = ({ product, cart }) => {
 			<Link to={`/product/${key}`}>
 				<h4>{name}</h4>
 			</Link>
-			<h1>{price}</h1>
+			<h1>${price}</h1>
 			<button className="btn btn-primary" onClick={() => addToCart(product)}>
 				Add Cart
 			</button>
