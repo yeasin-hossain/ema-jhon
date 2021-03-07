@@ -12,7 +12,7 @@ const Search = () => {
 		itemName.length === 0 && setProducts(fakeData);
 	};
 	return (
-		<div>
+		<div className="sticky-top" style={{ top: '10px' }}>
 			<input
 				type="text"
 				className="form-control w-25 d-block m-auto"
